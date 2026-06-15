@@ -9,7 +9,7 @@ console.log(userData)
 //console.log(userName)// ❌ This won't work - userName doesn't exist outside the object
 console.log(userData.userName)
 console.log(typeof userData) // Type  -> object
-console.log(typeof {})
+console.log(typeof {}) // object
 
 
 
