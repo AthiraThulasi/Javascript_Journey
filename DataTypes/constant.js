@@ -13,5 +13,5 @@ console.log(arr)
 arr[0] = 100 // modifying the value
 console.log(arr)
 
-arr = [ 70,50,30]//but can't change the pointer // 
-TypeError: Assignment to constant variable.
+arr = [ 70,50,30]//but can't change the pointer // Re-assignment is not allowed
+//TypeError: Assignment to constant variable.
