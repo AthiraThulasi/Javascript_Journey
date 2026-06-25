@@ -27,3 +27,5 @@ console.log({} + []); // [object Object]
 // [] always becomes "" (empty string)
 // {} always becomes "[object Object]"
 // BUT if {} is at the start of a line, JS thinks it's a code block and ignores it .
+
+

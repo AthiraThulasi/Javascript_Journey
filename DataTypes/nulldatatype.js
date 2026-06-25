@@ -16,4 +16,4 @@ console.log(typeof(username))// type - undefined
 console.log(user == username) // true
 
 // === > Strict equals > checks value + type
-console.log(user === username) // true
+console.log(user === username) // false // user is of object type and username is undefined
