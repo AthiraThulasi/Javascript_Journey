@@ -17,3 +17,4 @@ let names = [`Athira`,`Beena`,`Thulasi`]
     console.log(" ".repeat(30)) // for...in → gives indices
     for(let z in names)
         console.log(z)
+        console.log(names["0"])
