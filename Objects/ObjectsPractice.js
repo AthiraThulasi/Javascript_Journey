@@ -1,14 +1,14 @@
 // object Literal
 
-const { use } = require("react");
-
 // we can store - string, number, array, boolean, object
-let user_details = {name : 'Athira', "last name" : Beena,   // user_details → Variable; "last name" → Property name (key) ;"beena" 
-                                                            // → Property name with space should be a string, so quotes is mandatory
+// user_details → Variable; "last name" → Property name (key) ; property vale - "beena" 
+// → Property name with space should be a string, so quotes is mandatory // //   // Use bracket notation ([]) with quotes because the property name contains a space.
+let user_details = {name : 'Athira',
+    "last name" : "Beena",   
     YOE : 5, 
     isActive : true,
     marks :[100,85,85],
-    greet : function(){
+    greet : function(){       //Inside an object, a function is stored as a key-value pair ; // Key: greet  | Value: function
         console.log('Work Hard')
     },
     address :{    // obj nested inside another object
@@ -26,8 +26,10 @@ console.log(user_details.name);
 console.log(user_details.YOE);
 console.log(user_details.isActive);
 console.log(user_details.marks);
+console.log(user_details.marks[1]);
 console.log(user_details.address.city);
-console.log(user_details["last name"]) // Bracket notation ([]) with quotes as the variable name has space
+//console.log(user_details["last name"]) // Use bracket notation ([]) with quotes because the property name contains a space.
+//console.user_details.greet()
 
 user_details.greet();
 
