@@ -16,17 +16,28 @@ const happiness = function(){ // function has no name - Anonymous Function
 }
 
 
+// 3. Arrow Function // No function keyword // js recognize arrow function as fun definition
+  const gratitude = () => {
+    console.log("Be grateful")
+  }
 
 
-
-// Calling a function inside an object
+// 4. Calling a function inside an object - Represented as key value pair
 
 const user = {
     name: "Athira",
-
     greet: function () {
         return `Hello ${this.name}`;
     }
 };
 
 console.log(user.greet());
+
+// 5. ES6 Shorthand Method // can be used only inside object
+
+const user = {
+    smile(){
+        console.log("make someone smile")
+    }
+}
+
