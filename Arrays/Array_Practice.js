@@ -14,7 +14,7 @@ let names = [`Athira`,`Beena`,`Thulasi`]
     for(let x of names)
         console.log(x)
 
-    console.log(" ".repeat(30)) // for...in → gives indices
+    console.log(" ".repeat(30)) // for...in → gives indices [key values]
     for(let z in names)
         console.log(z)
         console.log(names["0"])
