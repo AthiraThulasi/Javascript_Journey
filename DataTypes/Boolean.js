@@ -24,6 +24,6 @@ console.log(Boolean([])) // truthy (Empty array is truthy value)
 // First !  → false
 // Second ! → true
 
-console.log(!!"Athira") //"Athira" is truthy - true;  !"Athira" - false '; !"Athira" - true
+console.log(!!"Athira") //"Athira" is truthy - true; // !"Athira" - false '; !"Athira" - true
 console.log(!!0)
 
