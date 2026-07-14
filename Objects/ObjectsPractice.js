@@ -2,7 +2,7 @@
 
 // we can store - string, number, array, boolean, object
 // user_details → Variable; "last name" → Property name (key) ; property vale - "beena" 
-// → Property name with space should be a string, so quotes is mandatory // //   // Use bracket notation ([]) with quotes because the property name contains a space.
+// → Property name with space should be a string, so quotes is mandatory // Use bracket notation ([]) with quotes because the property name contains a space.
 let user_details = {name : 'Athira',
     "last name" : "Beena",   
     YOE : 5, 
