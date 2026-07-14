@@ -98,7 +98,7 @@ console.log(tommy);            // Dog { name: 'Tommy' }
 // Object.create is the only one where the prototype is explicitly hand-picked at creation
 // Prototype means to create  obj using an existing obj // Similar to inheritance in java ( use a class to creates another class(extends class ))
 
-
+// Create a PROTOTYPE
 let teacher = {name: 'Anu', // PROTOTYPE
     role:'Instructor',
    lang:"js"
@@ -108,9 +108,13 @@ let student = Object.create(teacher)
 student.name = "Anna";
 student.marks =[69,89]
 console.log(student);
-//console.log(Object.getPrototypeOf(user))
 console.log(student.name);// info of current obj
-console.log(Object.getPrototypeOf(teacher));
+console.log(Object.getPrototypeOf(teacher));// info of PROTOTYPE
+console.log(student.role)// Accessing property of PROTOTYPE using current Obj
+
+// Accessing name property from current obj and PROTOTYPE
+console.log(student.name);// prints current object's name property
+console.log(Object.getPrototypeOf(student).name)// prints PROTOTYPE's name property
 
 // How do you create an object with no prototype?
 //Object.create(null)
@@ -142,6 +146,10 @@ Object.getPrototypeOf(Object.prototype);  // null 🛑 — the built-in end of e
 let bare = Object.create(null);
 Object.getPrototypeOf(bare);              // null — born with no parent!
 
+//========================================
+// Object Creation - hasOwnProperty()
+//========================================
+console.log(student.hasOwnProperty(marks))
 
 
 
