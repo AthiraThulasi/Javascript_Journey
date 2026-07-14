@@ -21,9 +21,9 @@ console.log(dog.sleep());      // "zzz" — note: console.log added to SEE the r
 console.log(Object.keys(dog)); // ["barks"] — proof nothing was copied!
 
 
-// ============================================
+// ============================================================
 // DEMO 2: Object.create — the preferred - pure prototype way
-// ============================================
+// ============================================================
 const cat = Object.create(animal);   // born WITH animal as prototype
 cat.meows = true;
 
@@ -53,3 +53,16 @@ class Dog extends Animal {           // extends wires the prototype chain!
 const tommy = new Dog("Tommy");
 console.log(tommy.bark());    // "Tommy says Woof!" — own class method
 console.log(tommy.sleep());   // "Tommy says zzz" — inherited via prototype chain
+
+
+//===================================================================================
+//  WHO'S THE PROTOTYPE? — comparison of object creation methods
+//===================================================================================
+//  | Creation               | Prototype of the new object                          |
+//  |------------------------|------------------------------------------------------|
+//  | {} (literal)           | Object.prototype (default — toString() etc. live here)|
+//  | new Object()           | Object.prototype (same as literal)                   |
+//  | Object.create(animal)  | animal — WE choose!                             |
+//  | Object.create(null)    | NOTHING — no prototype at all (bare dictionary)      |
+//  | new Dog("Tommy")       | Dog.prototype (the class wires it)                   |
+//=====================================================================================
