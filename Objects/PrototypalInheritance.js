@@ -1,6 +1,9 @@
 
 // JavaScript uses prototypal inheritance — objects inherit directly from other objects through the prototype chain, unlike Java's class-based inheritance.
 
+// ============================================
+// DEMO 1: setPrototypeOf —  RAW mechanism 
+// ============================================
 const animal = {
     eats: true,
     sleep() { return "zzz"; }
@@ -10,8 +13,43 @@ const dog = {
     barks: true
 };
 
-Object.setPrototypeOf(dog, animal);   // dog's prototype = animal
+Object.setPrototypeOf(dog, animal);
 
-console.log(dog.barks);   // true  — found on dog itself
-console.log(dog.eats);    // true  — NOT on dog → JS walks up to prototype (animal) → found!
-dog.sleep();              // "zzz" — inherited the METHOD too, from a plain object!
+console.log(dog.barks);        // true — own property
+console.log(dog.eats);         // true — found via prototype chain
+console.log(dog.sleep());      // "zzz" — note: console.log added to SEE the result!
+console.log(Object.keys(dog)); // ["barks"] — proof nothing was copied!
+
+
+// ============================================
+// DEMO 2: Object.create — the preferred - pure prototype way
+// ============================================
+const cat = Object.create(animal);   // born WITH animal as prototype
+cat.meows = true;
+
+console.log(cat.meows);   // true — own
+console.log(cat.eats);    // true — delegated to animal
+console.log(cat.sleep()); // "zzz"
+
+
+// ============================================
+// DEMO 3: class + extends 
+// ============================================
+class Animal {
+    constructor(name) {
+        this.name = name;
+    }
+    sleep() {
+        return `${this.name} says zzz`;
+    }
+}
+
+class Dog extends Animal {           // extends wires the prototype chain!
+    bark() {
+        return `${this.name} says Woof!`;
+    }
+}
+
+const tommy = new Dog("Tommy");
+console.log(tommy.bark());    // "Tommy says Woof!" — own class method
+console.log(tommy.sleep());   // "Tommy says zzz" — inherited via prototype chain
