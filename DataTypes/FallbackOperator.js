@@ -1,5 +1,5 @@
-// fall back operators are used for falsy values
-// Two fall back operators 
+//  fall back operators are used for falsy values
+//  Two fall back operators 
 //  Double Question Mark - ?? [Nullish Coalescing - In js nullish means null or undefined ; ?? only reacts to these two values; Coalescing” = combining / choosing a value ]
 //  Logical Operator - || [] work for all 8 falsy values ]
 //  Fallback operator says - Use the value on the left. If it's not usable, fall back to the value on the right.
